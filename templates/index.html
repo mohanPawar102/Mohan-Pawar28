@@ -1,0 +1,576 @@
+{% extends 'base.html' %}
+{% block title %}Mohan Pawar{% endblock title %}
+{% load static %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  {% comment %} ==================== My Static Css Link ====================== {%endcomment %}
+  <link rel="stylesheet" href="{% static 'css/css.css' %}">
+
+  {% comment %} ============== FontAwesome Online Icon Css Link =================== {% endcomment %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  {% comment %} =========== boostrap css lonk ==================== {% endcomment %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  {% comment %} ==================== Home Section Start =========================== {% endcomment %}
+  <section id="home" class="home-bg">
+    <div class="hero-content">
+      <h5>Hello, I'm</h5>
+      <h1 class="hero-title">Mohan Pawar</h1>
+      <p class="hero-sub">
+        <b> <span id="typing"></span></b>
+      </p>
+      <div class="mt-4">
+        <a href="#project" class="btn btn-gradient mr-3 ">View My Projects</a>
+        <a href="{% static 'files/Mohan_Pawar_CV.pdf' %}" class="btn btn-outline-light mr-3">Download My CV <i
+            class="fas fa-download"></i></a>
+        <a href="#contact" class="btn btn-outline-light mr-3"> Get In Touch</a>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://github.com/mohanPawar102" class="btn btn-primary"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mohan-pawar-28mt" class="btn btn-success"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="btn btn-danger"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <div class="mt-4">
+        <span class="arrow"><i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+    </div>
+  </section>
+  {% comment %} ============== Home Section End ========================== {%endcomment %}
+
+
+  {% comment %} ============= About Section Start ======================= {%endcomment %}
+  <section id="about" class="section about" data-nav="dark">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="about-title">About Me</h2>
+        <div class="about-line"></div>
+      </div>
+      <div class="row align-items-center">
+        <!-- Left Side -->
+        <div class="col-md-6 reveal-left">
+          <div class="about-text">
+            <p class="location">
+              <i class="fa-solid fa-location-dot"></i> Nashik
+            </p>
+            <p>
+              <b>🚀 Passionate Full Stack Developer building scalable and modern web applications.</b>
+              I am a creative Full Stack Developer who loves building modern and responsive web
+              applications.
+              With strong skills in frontend and backend technologies, I focus on writing clean code and
+              designing engaging user experiences. I am always learning, exploring new technologies,
+              and improving my craft.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-md-6 text-center reveal-right">
+          <img src="{% static 'images/about-sec.jpeg' %}" class="img-fluid about-img" alt="About Image">
+        </div>
+        <div class="mt-4 reveal-right mx-auto" style="text-align:center; ">
+          <a href="#project" class="btn btn-gradient mr-3 ">View My Projects</a>
+          <a href="{% static 'files/Mohan_Pawar_CV.pdf' %}" class="btn btn-outline-dark mr-3">Download My CV
+            <i class="fas fa-download"></i></a>
+          <a href="#contact" class="btn btn-outline-dark mr-3"> Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% comment %} ===================== About Section End =================== {%endcomment %}
+
+
+  {% comment %} =================== Skill Section Start ======================= {%  endcomment %}
+  <section id="skill" class="section  text-dark " data-nav="dark">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="skill-title">Skills &amp; Technology</h2>
+        <div class="skill-line"></div>
+      </div>
+      <div class="row mx-auto" style="gap:15px">
+        <div class="frontend reveal-right">
+          <h3 class="frontend-title mb-3"><i class="fa-solid fa-code"></i> <b>FrontEnd</b></h3>
+          <div class="skill">
+            <p>HTML5</p>
+            <div class="progress">
+              <div class="progress-bar " data-width="90%">95%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>CSS3</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="90%">90%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>JavaScript(ES6+)</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="70%">70%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>React Framework</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="60%">60%</div>
+            </div>
+          </div>
+        </div>
+
+        {% comment %} ================ BackEnd ================ {% endcomment %}
+        <div class="frontend reveal-right">
+          <h3 class="frontend-title mb-3 "><i class="fa-solid fa-code"></i> <b>BackEnd</b></h3>
+          <div class="skill">
+            <p>Python</p>
+            <div class="progress">
+              <div class="progress-bar " data-width="65%">65%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>Django Framework</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="75%">75%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>PHP</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="75%">75%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>Authentication</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="80%">80%</div>
+            </div>
+          </div>
+        </div>
+
+        {% comment %} ========= Database ======== {% endcomment %}
+        <div class="frontend reveal-right">
+          <h3 class="frontend-title mb-3"><i class="fa-solid fa-code"></i><b> Database</b></h3>
+          <div class="skill">
+            <p>MySQL</p>
+            <div class="progress">
+              <div class="progress-bar " data-width="60%">60%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>SQLite (Django default)</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="65%">65%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>React Framework</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="60%">60%</div>
+            </div>
+          </div>
+        </div>
+
+        {% comment %} ================ ToolKIt ================ {% endcomment %}
+        <div class="frontend reveal-right">
+          <h3 class="frontend-title mb-3 "><i class="fa-solid fa-code"></i><b> Tools &amp; Other</b></h3>
+          <div class="skill">
+            <p>Git</p>
+            <div class="progress">
+              <div class="progress-bar " data-width="50%">50%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>GitHub</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="75%">75%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>C</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="90%">90%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <p>VS Code</p>
+            <div class="progress">
+              <div class="progress-bar" data-width="90%">90%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  {% comment %} ================= Skill Section Endb ======== {% endcomment %}
+
+  {% comment %} ================ Project Section Start ======== {% endcomment %}
+  <section id="project" class="section projects-section  " data-nav="dark">
+    <div class="container">
+
+      <!-- Section Title -->
+      <div class="text-center mb-5">
+        <h2 class="project-title">Featured Projects</h2>
+        <div class="project-line mx-auto"></div>
+        <p class="project-subtitle mt-3">
+          Innovative solutions built with modern technologies and real-world problem solving.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- SmartCampus360 Project -->
+        <div class="col-md-6 col-lg-4 pro-card">
+          <div class="project-card reveal-up">
+            <div class="project-img">
+              <img src="{% static "images/project.png" %}" class="img-fluid" alt="SmartCampus360">
+            </div>
+            <div class="project-content">
+              <h5>SmartCampus360</h5>
+              <p>
+                A complete college management system , student tracking,
+                certificate management, admin automation &amp; analytics dashboard.
+              </p>
+
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+                <span>Python</span>
+                <span>Django</span>
+                <span>MySQL</span>
+              </div>
+
+              <div class="mt-3">
+                <a href="#" class="btn btn-sm btn-gradient">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-outline-dark ms-2">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Project Card -->
+        <div class="col-md-6 col-lg-4 pro-card">
+          <div class="project-card reveal-up">
+            <div class="project-img">
+              <img src="{% static "images/project-1.png" %}" class="img-fluid" alt="Future Project">
+            </div>
+            <div class="project-content">
+              <h5>AI Secure Voting System</h5>
+              <p>
+                Biometric authentication based smart voting system with
+                face recognition &amp; blockchain security.
+              </p>
+
+              <div class="tech-stack">
+                <span>React</span>
+                <span>Node</span>
+                <span>AI</span>
+                <span>Blockchain</span>
+                <span>Firbase</span>
+              </div>
+
+              <div class="mt-3">
+                <a href="#" class="btn btn-sm btn-gradient">Coming Soon</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra Project -->
+        <div class="col-md-6 col-lg-4 pro-card">
+          <div class="project-card reveal-up">
+            <div class="project-img">
+              <img src="{%static "images/project-2.png"%}" class="img-fluid" alt="Portfolio">
+            </div>
+            <div class="project-content">
+              <h5>Modern Portfolio</h5>
+              <p>
+                Fully animated personal portfolio with smooth section scroll,
+                dark/light theme &amp; interactive UI.
+              </p>
+
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+                <span>Bootstrap</span>
+                <span>Django</span>
+                <span>MySQL</span>
+              </div>
+
+              <div class="mt-3">
+                <a href="#" class="btn btn-sm btn-gradient">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  {% comment %} ============== PROJECT SECTION END ===================== {%  endcomment %}
+
+
+  {% comment %} ============== CONTACT SECTION START ================ {% endcomment %}
+  <section id="contact" class="contact-section section" data-nav="dark">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="contact-title">Let's Work Together</h2>
+        <div class="contact-line"></div>
+        <p class="contact-sub">
+          Have a project idea or collaboration in mind? Let's connect!
+        </p>
+      </div>
+
+      <div class="row align-items-center">
+
+        <!-- Left Side Info -->
+        <div class="col-lg-5 mb-4 mb-lg-0 contact-info pro-card">
+          <div class="info-box">
+            <i class="fa-solid fa-envelope"></i>
+            <h5>Email</h5>
+            <p>mp933116@gmail.com</p>
+          </div>
+
+          <div class="info-box">
+            <i class="fa-solid fa-phone"></i>
+            <h5>Phone</h5>
+            <p>+91 7558327748</p>
+          </div>
+
+          <div class="info-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <h5>Location</h5>
+            <p>Nashik, India</p>
+          </div>
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="col-lg-7 pro-card">
+         <form class="contact-form shadow-lg" method="POST" id="contactForm" autocomplete="off">
+            {% csrf_token %}
+           
+            {% if messages %}
+             {% for message in messages %}
+           <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+              {{ message }}
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+             {% endfor %}
+             {% endif %}
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <input type="tel" class="form-control" name="contact"  pattern="[0-9]{10}" placeholder="Contact Number" pattern="[0-9]{10}"
+                required>
+              <small class="text-muted">Enter 10 digit number</small>
+            </div>
+
+            <div class="mb-3">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+            </div>
+
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" name="message" placeholder="Your Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn contact-btn w-100">
+              Send Message
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  {% comment %} =============== CONTACT SECTION END ========== {% endcomment %}
+
+
+  {% comment %} ============= FOOTER SECTION START ============ {% endcomment %}
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+
+        <!-- Left Side Text -->
+        <div class="col-12 col-md-6 mb-2 mb-md-0">
+          <p class="mb-0 footer-text">
+            &copy; 2026 Mohan Pawar. Portfolio.
+          </p>
+        </div>
+
+        <!-- Right Side Social Icons -->
+        <div class="col-12 col-md-6 text-md-end">
+          <a href="https://github.com/mohanPawar102" class="social-btn btn btn-outline-light">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mohan-pawar-28mt" class="social-btn btn btn-outline-light">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-btn btn btn-outline-light">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  {% comment %} ================== FOOTER SECTION END ============ {% endcomment %}
+
+
+
+  {% comment %} ================ CURSOR SECTION ============= {% endcomment  %}
+  <div class="cursor">
+    <span class="corner top-left"></span>
+    <span class="corner top-right"></span>
+    <span class="corner bottom-left"></span>
+    <span class="corner bottom-right"></span>
+    <span class="center-dot"></span>
+  </div>
+
+  {% comment %} ================ Body End================================ {% endcomment %}
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script>
+    var typed = new Typed("#typing", {
+      strings: [
+        "Creative Web Developer",
+        "UI/UX Designer",
+        "Full Stack Developer"
+      ],
+      typeSpeed: 80,
+      backSpeed: 50,
+      backDelay: 1500,
+      loop: true
+    });
+
+
+    {% comment %}   Skill section {% endcomment %}
+    window.addEventListener("scroll", function () {
+      let skills = document.querySelectorAll(".progress-bar");
+
+      skills.forEach(skill => {
+        let position = skill.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.3;
+
+        if (position < screenPosition) {
+          skill.style.width = skill.getAttribute("data-width");
+        }
+      });
+    });
+
+
+    {% comment %} about section {% endcomment %}
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+
+    {% comment %}  == courser = = {% endcomment %}
+   if (!('ontouchstart' in window)) {
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", e => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+    });
+}
+
+
+
+
+    {% comment %}  scroll detection  {% endcomment %}
+    window.addEventListener("scroll", function () {
+
+      const navbar = document.getElementById("navbar");
+      const sections = document.querySelectorAll("section");
+
+      let current = null;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+          current = section;
+        }
+      });
+
+      if (current && current.dataset.nav === "dark") {
+        navbar.classList.add("dark-nav");
+        navbar.classList.remove("navbar-dark");
+        navbar.classList.add("navbar-light");
+      } else {
+        navbar.classList.remove("dark-nav");
+        navbar.classList.remove("navbar-light");
+        navbar.classList.add("navbar-dark");
+      }
+
+    });
+
+
+    {% comment %} ==== section image enter set animation ======== {% endcomment %}
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active"); // 👈 हे add कर
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".reveal-left, .reveal-right, .pro-card")
+      .forEach(el => observer.observe(el));
+
+
+      {% comment %} ============= submit form no mt form js ============= {% endcomment %}
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    if (!this.checkValidity()) {
+        e.preventDefault();  // 🚫 Prevent refresh
+        this.reportValidity(); // 🔥 Show browser validation message
+    }
+
+});
+  </script>
+
+
+  {% endblock body %}

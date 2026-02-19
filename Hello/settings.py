@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
-
+import os
 
 from pathlib import Path
 from django.contrib.messages import constants as messages
@@ -45,6 +45,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -124,6 +126,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 # added mannualy
 STATICFILES_DIRS = [
     BASE_DIR / "static"
@@ -138,3 +143,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'mpawarraj102102@gmail.com'
 EMAIL_HOST_PASSWORD = 'swoknmxtnshtqqhy'
+
+
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

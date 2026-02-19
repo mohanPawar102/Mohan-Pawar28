@@ -30,17 +30,13 @@ def index(request):
                 date = date,
             )
 
-            try:
-               send_mail(
-                    subject=f"New Contact from {name}",
-                    message=f"Name: {name}\nEmail: {email}\n\nSubject: {subject}\n\nMessage:\n{message}",
-                    from_email=settings.EMAIL_HOST_USER,
-                    recipient_list=['yourmail@gmail.com'],
-                    fail_silently=True,
-                 )
-            except Exception as e:
-                print("Email error:", e)
-
+            # send_mail(
+            #     subject=f"New Contact from {name}",
+            #     message=f"Name: {name}\nEmail: {email}\n\nSubject: {subject}\n\nMessage:\n{message}",
+            #     from_email=settings.EMAIL_HOST_USER,  # ⚠️ quotes काढले
+            #     recipient_list=['mpawarraj102102@gmail.com'],
+            #     fail_silently=False,
+            # )
         messages.success(request, 'Your message hs been sent')
         return redirect("/")   # PRG Pattern
 

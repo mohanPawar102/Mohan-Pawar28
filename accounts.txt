@@ -1,0 +1,1 @@
+mohan,6000, <bound method account.get_pin of <__main__.account object at 0x000001F2BD236A50>> 

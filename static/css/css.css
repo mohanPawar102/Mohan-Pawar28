@@ -1,0 +1,703 @@
+
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+/* section  */
+section {
+    padding-top: 100px;
+    min-height: 5vh;
+
+    position: relative;
+    scroll-snap-align: start;
+}
+
+/* =============================== CURSOR CSS START ============================================== */
+.cursor {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+/* Hide custom cursor on mobile screens */
+@media (max-width: 992px) {
+    .cursor {
+        display: none !important;
+    }
+}
+
+/* 4 Corners */
+.corner {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid green;
+}
+
+
+/* Top Left */
+.top-left {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+/* Top Right */
+.top-right {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+/* Bottom Left */
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+
+/* Bottom Right */
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+/* Center Dot */
+.center-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: green;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Smooth rotate animation */
+.cursor {
+    animation: rotateCursor 4s linear infinite;
+}
+
+
+@keyframes rotateCursor {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+/* =========================================== CURSOR CSS END ================================== */
+
+
+/* =========================================== NAVBAR CSS START ========================================= */
+/* Custom Navbar */
+.logo{
+    width: 20%;
+}
+@media (max-width:768px) {
+    .logo{
+        width: 35%;
+    }
+}
+.custom-navbar {
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+    padding: 15px 0;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+    color: white !important;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: #ff6a00 !important;
+}
+/* Default White */
+#navbar .nav-link,
+#navbar .navbar-brand {
+    color: white;
+    transition: 0.3s;
+}
+.dark-nav {
+    /* background: #e9e3e3; */
+}
+
+.dark-nav .nav-link,
+.dark-nav .navbar-brand {
+    color: #000 !important;
+}
+
+/* Dark toggler icon */
+.dark-nav .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,\
+    %3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E\
+    %3Cpath stroke='black' stroke-width='2' stroke-linecap='round'\
+    stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+/* Scroll Effect */
+.scrolled {
+    background: #0f0c29 !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+/* =================================== NAVBAR CSS END ================================================= */
+
+
+
+
+/* ==================================== HOME CSS START ============================================ */
+.home-bg {
+    position: relative;
+    height: 100vh;
+    background: url("../images/bg.jpg" ) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Dark Overlay */
+.home-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.85),
+        rgba(0,0,0,0.75)
+    );
+    z-index: 1;
+}
+
+/* Content Above Overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+
+/* Big Gradient Name */
+.hero-title {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff6a00, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.hero-sub {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #ddd;
+}
+
+/* Buttons */
+.btn-gradient {
+    background: linear-gradient(90deg, #ff6a00, #ff0080);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    margin: 0.5rem;
+}
+a{
+    margin: 0.5rem;
+}
+
+.btn-gradient:hover {
+    opacity: 0.85;
+}
+
+.btn-outline-light {
+    padding: 10px 25px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 35px;
+    }
+}
+#typing::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/*  ============ Arrow style =========  */
+.download-btn {
+    position: relative;
+    padding: 12px 25px;
+    font-weight: 600;
+}
+.arrow {
+    display: inline-block;
+    margin-left: 8px;
+    animation: bounce 1.2s infinite;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+    100% { transform: translateY(0); }
+}
+/* ================================= HOME CSS END ==================================================== */
+
+
+
+
+/* ================================= ABOUT CSS START ============================================== */
+.about {
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+    padding: 100px 0;
+    z-index: 1;
+}
+.mx-auto{
+    justify-content:center;
+    /* align-items:center;   */
+    /* text-align:center; */
+    gap: 20px;
+}
+/* Big gradient blob */
+.about::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at 30% 30%, #ff0080, #2111b7);
+    border-radius: 50%;
+    top: -150px;
+    right: -150px;
+    opacity: 0.25;
+    filter: blur(100px);
+    animation: blobMove 10s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+@keyframes blobMove {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-50px, 50px);
+    }
+    100% {
+        transform: translate(30px, -40px);
+    }
+}
+
+
+/* Title */
+.about-title,
+.skill-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111;
+    position: relative;
+    display: inline-block;
+}
+
+/* Stylish animated line */
+.about-line,
+.skill-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff0080, #2111b7);
+    margin: 15px auto 0;
+    border-radius: 10px;
+    animation: lineGrow 1.5s ease forwards;
+}
+
+@keyframes lineGrow {
+    from { width: 0; }
+    to { width: 80px; }
+}
+
+/* Location badge */
+.location {
+    display: inline-block;
+    padding: 6px 18px;
+    border: 1px solid #ee8438;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #ee8438;
+    margin-bottom: 15px;
+}
+
+/* About text */
+.about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Image styling */
+.about-img {
+    max-width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    transition: 0.5s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+/* Reveal Animations */
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: all 1.2s ease;
+}
+
+.reveal-left {
+    transform: translateX(-80px);
+}
+
+.reveal-right {
+    transform: translateX(80px);
+}
+
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* ===================================== ABOUT CSS END ======================================= */
+
+
+
+/* ===================================== SKILL CSS START ================================== */
+
+.progress {
+    height: 5px;
+    background: #222;
+    margin-bottom: 20px;
+}
+#skill{
+    background-color: #d8d6d6;
+    padding-bottom: 2rem;
+}
+.skill p{
+    font-family: "Georgia", serif;
+}
+.frontend{
+    max-width: 400px;
+    width: 260px;
+    min-height: 400px;
+    border: 1px solid purple;
+    padding: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+@media (max-width:768px) {
+    .frontend{
+        width: 300px;
+    }
+}
+.frontend:hover{
+    border: 2px solid rgb(13, 179, 63);
+}
+.frontend-title{
+    font-family: "Georgia", serif;
+    color: rgb(73, 125, 77);
+    font-size: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+     background: linear-gradient(90deg, #ff0080, #2111b7);
+    transition: width 2s ease;
+}
+/* ======= animation ======== */
+/* ===== Notebook Animation ===== */
+
+.frontend {
+    transform: rotateY(90deg);
+    transform-origin: left;
+    opacity: 0;
+    transition: transform 2s ease, opacity 1s ease;
+    perspective: 1000px;
+}
+
+/* Scroll केल्यावर open */
+.frontend.show {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+/* Progress bar smooth fill */
+.frontend.show .progress-bar {
+    width: attr(data-width);
+}
+/* ================================== SKILL CSS END ============================================ */
+
+
+
+/* ================================== PROJECT CSS START ===================================== */
+.projects-section {
+    /* background: linear-gradient(135deg, #1f1c2c, #928dab); */
+    /* color: #fff; */
+}
+
+.project-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff0080, #2111b7);
+    border-radius: 10px;
+}
+
+.project-subtitle {
+    opacity: 0.8;
+}
+.pro-card{
+    opacity: 0;
+    margin-bottom: 2rem;
+}
+.pro-card.active{
+   animation: pro 2s ease; 
+   opacity: 1;
+}
+@keyframes pro {
+    from{
+        transform: translateX(-100px);
+    }to{
+        transform: translateX(0px);
+    }
+}
+
+/* Card Design */
+.project-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid green;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+     transition: 0.4s ease;
+    /* transform: translateX(50px); */
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Image */
+.project-img img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Content */
+.project-content {
+    padding: 20px;
+}
+
+.tech-stack span {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 5px 10px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Button */
+.btn-gradient {
+    background: linear-gradient(90deg, #ff0080, #2111b7);
+    color: white;
+    border: none;
+}
+
+.btn-gradient:hover {
+    opacity: 0.8;
+}
+/* ================================ PROJECT CSS END ========================================== */
+
+
+/* ================================ CONTACT CSS START ======================================= */
+.contact-section {
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    padding: 100px 0;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff0080, #2111b7);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff0080, #2111b7);
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.contact-sub {
+    color: #555;
+}
+
+.contact-info .info-box {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.contact-info .info-box i {
+    font-size: 30px;
+    color: #ff0080;
+    margin-bottom: 10px;
+}
+
+.contact-info .info-box:hover {
+    transform: translateY(-8px);
+    border: 2px solid green;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.contact-form:hover{
+    border: 2px solid green;
+}
+
+.contact-form .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.contact-form .form-control:focus {
+    border-color: #ff0080;
+    box-shadow: 0 0 10px rgba(255,0,128,0.2);
+}
+
+.contact-btn {
+    background: linear-gradient(90deg, #ff0080, #2111b7);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================== CONTACT CSS END ====================================== */
+
+
+
+/* =================================== FOOTER CSS STRAT ============================================ */
+.footer-section {
+    background: #111;
+    padding: 20px 0;
+}
+
+.footer-text {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    color: #ddd;
+}
+
+.social-btn {
+    margin: 0 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 6px 0;
+    transition: 0.3s ease;
+}
+
+.social-btn i {
+    margin-left: -5px;
+    font-size: 18px;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    background: white;
+    color: black;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+
+    .footer-text {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .social-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+}
